@@ -14,6 +14,7 @@
 <!--<script src="jquery-3.2.1.min.js"></script>-->
 <script src="scripts/jquery-3.2.1.min.js"></script>
 <script src="scripts/utils.js"></script>
+  <script src="scripts/config.js"></script>
 <!--<script src="http://d3js.org/d3.v4.min.js"></script>-->
 <!--<script src="d3/d3.min.js"></script>-->
 <script src="scripts/d3.v4.min.js"></script>
@@ -53,26 +54,26 @@
 			<div class="nav container" id="search_bar">
 				<div class="nav inputs_container_top">
 					<div class="nav input_unit_container">
-						<label for="label_field">Node label:</label>
+						<label for="label_field">节点标签:</label>
 						<input name="label_field" id="label_field" value="" />
 					</div>
 					<div class="nav input_unit_container">
-						<label for="search_field">Node property:</label>
+						<label for="search_field">节点属性:</label>
 						<input name="search_field" id="search_field" value="" />
 					</div>
 					<div class="nav input_unit_container">
-						<label class="nav input_label" for="search_value">Property value:</label>
+						<label class="nav input_label" for="search_value">属性值:</label>
 						<input name="search_value" id="search_value" value="" />
 					</div>
 					<div class="nav input_unit_container">
-						<label for="search_type">Type of search:</label>
+						<label for="search_type">搜索类型:</label>
 						<select name="search_type" id="search_type">
-							<option value="eq">Equals</option>
-							<option value="contains">Contains</option>
+							<option value="eq">相等</option>
+							<option value="contains">包含</option>
 						</select>
 					</div>
 					<div class="nav input_unit_container">
-						<label for="limit_field">Results limit:</label>
+						<label for="limit_field">结果条数:</label>
 						<input name="limit_field" id="limit_field" value="50" min="1" max="1000" type="number"/>
 					</div>
 				</div>
@@ -83,11 +84,11 @@
 			<div class="nav container" id="graph_bar">
 				<div class="nav inputs_container_bottom">
 					<div class="nav input_unit_container">
-						<label class="nav input_label" for="edge_filter">Traverse by edge:</label>
+						<label class="nav input_label" for="edge_filter">按边横移:</label>
 						<input name="edge_filter" id="edge_filter" value="" />
 					</div>
 					<div class="nav input_unit_container">
-						<label class="nav input_label" for="nbLayers">Nb of layers</label>
+						<label class="nav input_label" for="nbLayers">Nb 层数</label>
 						<input type="number" id="nbLayers" min="1" max="128" onclick="set_nb_layers()">
 					</div>
 					<div class="nav input_unit_container">
@@ -96,7 +97,7 @@
 					</div>
 					<div class="nav input_unit_container">
 						<input type="checkbox" name="showName_box" id="showName" onclick="graphShapes.show_names()"/>
-						<label class="nav input_label" for="showName">Show labels</label>
+						<label class="nav input_label" for="showName">显示标签</label>
 					</div>
 				</div>
 				<div class="nav controls">
@@ -131,24 +132,24 @@
 		</div>
 		<div class="footer">
 			<div class="container">
-				<div class="nav inputs_container_top">
+				<div class="nav inputs_container_top" id="configForm" >
 					<div class="nav input_unit_container">
-						<label class="nav input_label" for="server_address">Server Address:</label>
-						<input name="server_address" id="server_address" value="localhost" />
+						<label class="nav input_label" for="server_address">服务地址:</label>
+						<input name="server_address" id="server_address" value="" />
 					</div>
 					<div class="nav input_unit_container">
-						<label class="nav input_label" for="server_port">Server port:</label>
+						<label class="nav input_label" for="server_port">服务端口号:</label>
 						<input name="server_port" id="server_port" type="number" value="8182"/>
 					</div>
 					<div class="nav input_unit_container">
-						<label for="server_protocol">Protocol:</label>
+						<label for="server_protocol">协议:</label>
 						<select name="server_protocol" id="server_protocol">
 							<option value="websocket">websocket</option>
 							<option value="REST">REST</option>
 						</select>
 					</div>
 					<div class="nav input_unit_container">
-						<label for="communication_method">Gremlin version:</label>
+						<label for="communication_method">Gremlin 版本:</label>
 						<select name="communication_method" id="communication_method">
 							<option value="GraphSON3">3.3.*</option>
 							<option value="GraphSON2">3.2.*</option>
