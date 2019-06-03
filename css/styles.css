@@ -2,14 +2,14 @@
 Base styles
 ------------------------*/
 html {
-	background: #fff;
+	background: #114bda;
 }
 body
 {
 	margin: 0;
 	padding: 0;
-	color: #333;
-	background-color: #eee;
+	color: #fff;
+	background-color: #114bda;
 	font: 1em/1.2 "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 	height: 100%;
 }
@@ -91,10 +91,10 @@ Layout styles
 
 .nav-bar
 {
-	color: #333;
-	background: #fff;
+	color: #fff;
+	background: #114bda;
 	padding: 0;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #fff;
 	font-size: 14px;
 }
 
@@ -140,7 +140,8 @@ Layout styles
 .content
 {
 	padding: 0em 0em;
-	background-color: #fff;
+	color: #fff;
+	background: #114bda;
 	height: 80vh;
 }
 
@@ -180,12 +181,15 @@ Layout styles
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	color: #333;
-	background: #fff;
+	color: #fff;
+	background: #114bda;
 	border-top: 1px solid #eee;
 	font-size: 14px;
 }
-
+input, select {
+	background: transparent;
+	color: #fff;
+}
 /* -----------------------
 Nav
 ------------------------*/
@@ -378,8 +382,8 @@ button {
 	min-width: 80px;
 	border: 0;
 	border: 1px solid #113B98;
-	background: #fff;
-	color: #113B98;
+	color: #fff;
+	background: #114bda;
 	padding: 5px 10px;
 	transition:all .3s;
     -o-transition:all .3s;
@@ -390,6 +394,6 @@ button {
     box-sizing: border-box;
 }
 button:hover{
-	background: #113B98;
-	color: #fff;
+	background: #fff;
+	color: #114bda;
 }
